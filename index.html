@@ -23,13 +23,17 @@
     <!-- Contenitore reattivo per il video senza cornice e ombra -->
     <div class="relative w-full max-w-4xl overflow-hidden rounded-2xl" style="padding-top: 56.25%;">
         <!-- L'elemento <video> che riprodurrà il tuo file locale.
-             Il tag 'controls' permette di riprodurre il video in modo "normale" con i controlli standard del browser. -->
+             Abbiamo aggiunto "autoplay", "muted" e "playsinline" per una migliore compatibilità con le TV.
+             "controls" permette di usare i comandi del telecomando. -->
         <video
             src="fil.mp4"
             controls
             preload="metadata"
             class="absolute top-0 left-0 w-full h-full"
             poster="https://placehold.co/1280x720/E5E7EB/6B7280?text=Anteprima+Video"
+            autoplay
+            muted
+            playsinline
         >
             Il tuo browser non supporta il tag video.
         </video>
