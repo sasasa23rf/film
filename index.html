@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettore Video Locale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            /* Rimuove i margini predefiniti e usa flexbox per centrare il contenuto */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-0">
+
+    <!-- Contenitore reattivo per il video senza cornice e ombra -->
+    <div class="relative w-full max-w-4xl overflow-hidden rounded-2xl" style="padding-top: 56.25%;">
+        <!-- L'elemento <video> che riprodurrà il tuo file locale.
+             Il tag 'controls' permette di riprodurre il video in modo "normale" con i controlli standard del browser. -->
+        <video
+            src="fil.mp4"
+            controls
+            preload="metadata"
+            class="absolute top-0 left-0 w-full h-full"
+            poster="https://placehold.co/1280x720/E5E7EB/6B7280?text=Anteprima+Video"
+        >
+            Il tuo browser non supporta il tag video.
+        </video>
+    </div>
+
+</body>
+</html>
